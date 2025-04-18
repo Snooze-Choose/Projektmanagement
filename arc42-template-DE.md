@@ -10,6 +10,8 @@ Template Version 8.2 DE. (basiert auf AsciiDoc Version), Januar 2023
 Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
 contributors. Siehe <https://arc42.org>.
 
+[![Grobarchitektur](images/architektur.png)](images/architektur.png)
+
 # Einführung und Ziele {#section-introduction-and-goals}
 
 ## Aufgabenstellung {#\_aufgabenstellung}
