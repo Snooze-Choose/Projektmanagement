@@ -21,7 +21,7 @@ Technisch wird das System plattformunabhängig und hoch skalierbar konzipiert, u
 
 ## Projektziele {#\_qualit_tsziele}
 
-Die Projektziele finden sich im [Backlog](https://github.com/orgs/Snooze-Choose/projects/6/views/3)
+Die Projektziele finden sich im [hier](https://github.com/Snooze-Choose/Projektmanagement/issues?q=is%3Aissue%20state%3Aopen%20label%3Aepic)
 
 ## Qualitätsziele {#\_qualit_tsziele}
 
