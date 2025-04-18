@@ -55,6 +55,8 @@ Die Projektziele finden sich im [hier](https://github.com/Snooze-Choose/Projektm
 
 ## Whitebox Gesamtsystem {#\_whitebox_gesamtsystem}
 
+[![Whitebox Gesamtsystem](images/whitebox.png)](images/whitebox.png)
+
 **_\<Übersichtsdiagramm>_**
 
 Begründung
