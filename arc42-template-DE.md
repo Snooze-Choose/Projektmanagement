@@ -14,22 +14,27 @@ contributors. Siehe <https://arc42.org>.
 
 ## Aufgabenstellung {#\_aufgabenstellung}
 
-Die Snooze & Choose GmbH hat sich dazu entschlossen, ihren veralteten Webshop grundlegend zu überarbeiten, um den steigenden Anforderungen des Marktes gerecht zu werden. Ziel ist es, eine moderne, benutzerfreundliche und leistungsfähige E-Commerce-Plattform bereitzustellen, die ein optimales Einkaufserlebnis für Kunden bietet und gleichzeitig den unternehmensinternen Betrieb effizient unterstützt.
-Im Rahmen dieser Modernisierung übernimmt das interne Softwareentwicklungsteam der Snooze & Choose GmbH die vollständige Konzeption und Umsetzung des Systems. Externe Partner sind in diesem Prozess nicht eingebunden.
-Das neue System soll zentrale E-Commerce-Funktionen bereitstellen, darunter Nutzerregistrierung und -verwaltung, Produktsuche, Warenkorbfunktionen, Checkout-Prozesse, Bestellbestätigungen sowie spezielle Administrationsoptionen zur Pflege von Artikeln und zur Auftragsübersicht.
-Technisch muss das System plattformunabhängig und hoch skalierbar konzipiert sein, um auch bei erhöhter Last zuverlässig zu funktionieren. Ziel ist es, den Webshop in einer Azure-basierten Cloud-Infrastruktur zu betreiben und so eine kontinuierliche Verfügbarkeit sowie einfache Wartung und Erweiterung sicherzustellen.
+Ein bestehender, veralteter Webshop soll grundlegend überarbeitet werden, um den steigenden Anforderungen des Marktes gerecht zu werden. Ziel ist es, eine moderne, benutzerfreundliche und leistungsfähige E-Commerce-Plattform bereitzustellen, die ein optimales Einkaufserlebnis für Kundinnen und Kunden bietet und gleichzeitig die internen Betriebsabläufe effizient unterstützt.
+Die vollständige Konzeption und Umsetzung des neuen Systems erfolgt durch ein internes Softwareentwicklungsteam. Externe Partner oder Dienstleister sind in diesen Prozess nicht eingebunden.
+Das neue System soll alle zentralen E-Commerce-Funktionen abdecken. Dazu gehören unter anderem die Nutzerregistrierung und -verwaltung, eine leistungsstarke Produktsuche, Warenkorbfunktionen, ein durchgängiger Checkout-Prozess, Bestellbestätigungen sowie ein administrativer Bereich zur Artikelpflege und zur Verwaltung von Bestellungen.
+Technisch wird das System plattformunabhängig und hoch skalierbar konzipiert, um auch bei stark schwankender Last zuverlässig zu funktionieren. Der Betrieb erfolgt in einer Azure-basierten Cloud-Infrastruktur, um eine hohe Verfügbarkeit sowie einfache Wartung und Erweiterbarkeit zu gewährleisten
+
+## Projektziele {#\_qualit_tsziele}
+
+Die Projektziele finden sich im Backlog
+[text](https://github.com/orgs/Snooze-Choose/projects/6/views/3)
 
 ## Qualitätsziele {#\_qualit_tsziele}
 
 ## Stakeholder {#\_stakeholder}
 
-+-----------------+-----------------+-----------------------------------+
-| Rolle | Kontakt | Erwartungshaltung |
-+=================+=================+===================================+
-| _\<Rolle-1>_ | _\<Kontakt-1>_ | _\<Erwartung-1>_ |
-+-----------------+-----------------+-----------------------------------+
-| _\<Rolle-2>_ | _\<Kontakt-2>_ | _\<Erwartung-2>_ |
-+-----------------+-----------------+-----------------------------------+
+## Stakeholder-Tabelle
+
+| Name             | Rolle           | Interesse am Projekt                             | Einfluss auf das Projekt | Erwartungshaltung                                            |
+| ---------------- | --------------- | ------------------------------------------------ | ------------------------ | ------------------------------------------------------------ |
+| Christoph Loeser | Auftraggeber    | Erfolgreiche Umsetzung im Budget und Zeitrahmen  | Hoch                     | Transparente Kommunikation, Einhaltung von Budget & Terminen |
+| Max Mustermann   | Kunden          | Benutzerfreundliches und funktionales Endprodukt | Mittel                   | Hohe Qualität, intuitive Bedienung, schneller Support        |
+| IT-Team          | Administratoren | Stabile, wartbare und sichere Systemumgebung     | Gering                   | Technische Dokumentation, einfache Wartbarkeit, Sicherheit   |
 
 # Randbedingungen {#section-architecture-constraints}
 
