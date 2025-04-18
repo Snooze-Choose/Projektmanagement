@@ -1,4 +1,4 @@
-# 
+#
 
 **Über arc42**
 
@@ -12,31 +12,36 @@ contributors. Siehe <https://arc42.org>.
 
 # Einführung und Ziele {#section-introduction-and-goals}
 
-## Aufgabenstellung {#_aufgabenstellung}
+## Aufgabenstellung {#\_aufgabenstellung}
 
-## Qualitätsziele {#_qualit_tsziele}
+Die Snooze & Choose GmbH hat sich dazu entschlossen, ihren veralteten Webshop grundlegend zu überarbeiten, um den steigenden Anforderungen des Marktes gerecht zu werden. Ziel ist es, eine moderne, benutzerfreundliche und leistungsfähige E-Commerce-Plattform bereitzustellen, die ein optimales Einkaufserlebnis für Kunden bietet und gleichzeitig den unternehmensinternen Betrieb effizient unterstützt.
+Im Rahmen dieser Modernisierung übernimmt das interne Softwareentwicklungsteam der Snooze & Choose GmbH die vollständige Konzeption und Umsetzung des Systems. Externe Partner sind in diesem Prozess nicht eingebunden.
+Das neue System soll zentrale E-Commerce-Funktionen bereitstellen, darunter Nutzerregistrierung und -verwaltung, Produktsuche, Warenkorbfunktionen, Checkout-Prozesse, Bestellbestätigungen sowie spezielle Administrationsoptionen zur Pflege von Artikeln und zur Auftragsübersicht.
+Technisch muss das System plattformunabhängig und hoch skalierbar konzipiert sein, um auch bei erhöhter Last zuverlässig zu funktionieren. Ziel ist es, den Webshop in einer Azure-basierten Cloud-Infrastruktur zu betreiben und so eine kontinuierliche Verfügbarkeit sowie einfache Wartung und Erweiterung sicherzustellen.
 
-## Stakeholder {#_stakeholder}
+## Qualitätsziele {#\_qualit_tsziele}
+
+## Stakeholder {#\_stakeholder}
 
 +-----------------+-----------------+-----------------------------------+
-| Rolle           | Kontakt         | Erwartungshaltung                 |
+| Rolle | Kontakt | Erwartungshaltung |
 +=================+=================+===================================+
-| *\<Rolle-1>*    | *\<Kontakt-1>*  | *\<Erwartung-1>*                  |
+| _\<Rolle-1>_ | _\<Kontakt-1>_ | _\<Erwartung-1>_ |
 +-----------------+-----------------+-----------------------------------+
-| *\<Rolle-2>*    | *\<Kontakt-2>*  | *\<Erwartung-2>*                  |
+| _\<Rolle-2>_ | _\<Kontakt-2>_ | _\<Erwartung-2>_ |
 +-----------------+-----------------+-----------------------------------+
 
 # Randbedingungen {#section-architecture-constraints}
 
 # Kontextabgrenzung {#section-context-and-scope}
 
-## Fachlicher Kontext {#_fachlicher_kontext}
+## Fachlicher Kontext {#\_fachlicher_kontext}
 
 **\<Diagramm und/oder Tabelle>**
 
 **\<optional: Erläuterung der externen fachlichen Schnittstellen>**
 
-## Technischer Kontext {#_technischer_kontext}
+## Technischer Kontext {#\_technischer_kontext}
 
 **\<Diagramm oder Tabelle>**
 
@@ -48,146 +53,146 @@ contributors. Siehe <https://arc42.org>.
 
 # Bausteinsicht {#section-building-block-view}
 
-## Whitebox Gesamtsystem {#_whitebox_gesamtsystem}
+## Whitebox Gesamtsystem {#\_whitebox_gesamtsystem}
 
-***\<Übersichtsdiagramm>***
+**_\<Übersichtsdiagramm>_**
 
 Begründung
 
-:   *\<Erläuternder Text>*
+: _\<Erläuternder Text>_
 
 Enthaltene Bausteine
 
-:   *\<Beschreibung der enthaltenen Bausteine (Blackboxen)>*
+: _\<Beschreibung der enthaltenen Bausteine (Blackboxen)>_
 
 Wichtige Schnittstellen
 
-:   *\<Beschreibung wichtiger Schnittstellen>*
+: _\<Beschreibung wichtiger Schnittstellen>_
 
-### \<Name Blackbox 1> {#__name_blackbox_1}
+### \<Name Blackbox 1> {#\_\_name_blackbox_1}
 
-*\<Zweck/Verantwortung>*
+_\<Zweck/Verantwortung>_
 
-*\<Schnittstelle(n)>*
+_\<Schnittstelle(n)>_
 
-*\<(Optional) Qualitäts-/Leistungsmerkmale>*
+_\<(Optional) Qualitäts-/Leistungsmerkmale>_
 
-*\<(Optional) Ablageort/Datei(en)>*
+_\<(Optional) Ablageort/Datei(en)>_
 
-*\<(Optional) Erfüllte Anforderungen>*
+_\<(Optional) Erfüllte Anforderungen>_
 
-*\<(optional) Offene Punkte/Probleme/Risiken>*
+_\<(optional) Offene Punkte/Probleme/Risiken>_
 
-### \<Name Blackbox 2> {#__name_blackbox_2}
+### \<Name Blackbox 2> {#\_\_name_blackbox_2}
 
-*\<Blackbox-Template>*
+_\<Blackbox-Template>_
 
-### \<Name Blackbox n> {#__name_blackbox_n}
+### \<Name Blackbox n> {#\_\_name_blackbox_n}
 
-*\<Blackbox-Template>*
+_\<Blackbox-Template>_
 
-### \<Name Schnittstelle 1> {#__name_schnittstelle_1}
-
-...
-
-### \<Name Schnittstelle m> {#__name_schnittstelle_m}
-
-## Ebene 2 {#_ebene_2}
-
-### Whitebox *\<Baustein 1>* {#_whitebox_emphasis_baustein_1_emphasis}
-
-*\<Whitebox-Template>*
-
-### Whitebox *\<Baustein 2>* {#_whitebox_emphasis_baustein_2_emphasis}
-
-*\<Whitebox-Template>*
+### \<Name Schnittstelle 1> {#\_\_name_schnittstelle_1}
 
 ...
 
-### Whitebox *\<Baustein m>* {#_whitebox_emphasis_baustein_m_emphasis}
+### \<Name Schnittstelle m> {#\_\_name_schnittstelle_m}
 
-*\<Whitebox-Template>*
+## Ebene 2 {#\_ebene_2}
 
-## Ebene 3 {#_ebene_3}
+### Whitebox _\<Baustein 1>_ {#\_whitebox_emphasis_baustein_1_emphasis}
 
-### Whitebox \<\_Baustein x.1\_\> {#_whitebox_baustein_x_1}
+_\<Whitebox-Template>_
 
-*\<Whitebox-Template>*
+### Whitebox _\<Baustein 2>_ {#\_whitebox_emphasis_baustein_2_emphasis}
 
-### Whitebox \<\_Baustein x.2\_\> {#_whitebox_baustein_x_2}
+_\<Whitebox-Template>_
 
-*\<Whitebox-Template>*
+...
 
-### Whitebox \<\_Baustein y.1\_\> {#_whitebox_baustein_y_1}
+### Whitebox _\<Baustein m>_ {#\_whitebox_emphasis_baustein_m_emphasis}
 
-*\<Whitebox-Template>*
+_\<Whitebox-Template>_
+
+## Ebene 3 {#\_ebene_3}
+
+### Whitebox \<\_Baustein x.1\_\> {#\_whitebox_baustein_x_1}
+
+_\<Whitebox-Template>_
+
+### Whitebox \<\_Baustein x.2\_\> {#\_whitebox_baustein_x_2}
+
+_\<Whitebox-Template>_
+
+### Whitebox \<\_Baustein y.1\_\> {#\_whitebox_baustein_y_1}
+
+_\<Whitebox-Template>_
 
 # Laufzeitsicht {#section-runtime-view}
 
-## *\<Bezeichnung Laufzeitszenario 1>* {#__emphasis_bezeichnung_laufzeitszenario_1_emphasis}
+## _\<Bezeichnung Laufzeitszenario 1>_ {#\_\_emphasis_bezeichnung_laufzeitszenario_1_emphasis}
 
--   \<hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
+- \<hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
 
--   \<hier Besonderheiten bei dem Zusammenspiel der Bausteine in diesem
-    Szenario erläutern>
+- \<hier Besonderheiten bei dem Zusammenspiel der Bausteine in diesem
+  Szenario erläutern>
 
-## *\<Bezeichnung Laufzeitszenario 2>* {#__emphasis_bezeichnung_laufzeitszenario_2_emphasis}
+## _\<Bezeichnung Laufzeitszenario 2>_ {#\_\_emphasis_bezeichnung_laufzeitszenario_2_emphasis}
 
 ...
 
-## *\<Bezeichnung Laufzeitszenario n>* {#__emphasis_bezeichnung_laufzeitszenario_n_emphasis}
+## _\<Bezeichnung Laufzeitszenario n>_ {#\_\_emphasis_bezeichnung_laufzeitszenario_n_emphasis}
 
 ...
 
 # Verteilungssicht {#section-deployment-view}
 
-## Infrastruktur Ebene 1 {#_infrastruktur_ebene_1}
+## Infrastruktur Ebene 1 {#\_infrastruktur_ebene_1}
 
-***\<Übersichtsdiagramm>***
+**_\<Übersichtsdiagramm>_**
 
 Begründung
 
-:   *\<Erläuternder Text>*
+: _\<Erläuternder Text>_
 
 Qualitäts- und/oder Leistungsmerkmale
 
-:   *\<Erläuternder Text>*
+: _\<Erläuternder Text>_
 
 Zuordnung von Bausteinen zu Infrastruktur
 
-:   *\<Beschreibung der Zuordnung>*
+: _\<Beschreibung der Zuordnung>_
 
-## Infrastruktur Ebene 2 {#_infrastruktur_ebene_2}
+## Infrastruktur Ebene 2 {#\_infrastruktur_ebene_2}
 
-### *\<Infrastrukturelement 1>* {#__emphasis_infrastrukturelement_1_emphasis}
+### _\<Infrastrukturelement 1>_ {#\_\_emphasis_infrastrukturelement_1_emphasis}
 
-*\<Diagramm + Erläuterungen>*
+_\<Diagramm + Erläuterungen>_
 
-### *\<Infrastrukturelement 2>* {#__emphasis_infrastrukturelement_2_emphasis}
+### _\<Infrastrukturelement 2>_ {#\_\_emphasis_infrastrukturelement_2_emphasis}
 
-*\<Diagramm + Erläuterungen>*
+_\<Diagramm + Erläuterungen>_
 
 ...
 
-### *\<Infrastrukturelement n>* {#__emphasis_infrastrukturelement_n_emphasis}
+### _\<Infrastrukturelement n>_ {#\_\_emphasis_infrastrukturelement_n_emphasis}
 
-*\<Diagramm + Erläuterungen>*
+_\<Diagramm + Erläuterungen>_
 
 # Querschnittliche Konzepte {#section-concepts}
 
-## *\<Konzept 1>* {#__emphasis_konzept_1_emphasis}
+## _\<Konzept 1>_ {#\_\_emphasis_konzept_1_emphasis}
 
-*\<Erklärung>*
+_\<Erklärung>_
 
-## *\<Konzept 2>* {#__emphasis_konzept_2_emphasis}
+## _\<Konzept 2>_ {#\_\_emphasis_konzept_2_emphasis}
 
-*\<Erklärung>*
+_\<Erklärung>_
 
 ...
 
-## *\<Konzept n>* {#__emphasis_konzept_n_emphasis}
+## _\<Konzept n>_ {#\_\_emphasis_konzept_n_emphasis}
 
-*\<Erklärung>*
+_\<Erklärung>_
 
 # Architekturentscheidungen {#section-design-decisions}
 
@@ -200,18 +205,18 @@ Zuordnung von Bausteinen zu Infrastruktur
 Siehe [Qualitätsanforderungen](https://docs.arc42.org/section-10/) in
 der online-Dokumentation (auf Englisch!).
 
-## Qualitätsbaum {#_qualit_tsbaum}
+## Qualitätsbaum {#\_qualit_tsbaum}
 
-## Qualitätsszenarien {#_qualit_tsszenarien}
+## Qualitätsszenarien {#\_qualit_tsszenarien}
 
 # Risiken und technische Schulden {#section-technical-risks}
 
 # Glossar {#section-glossary}
 
 +-----------------------+-----------------------------------------------+
-| Begriff               | Definition                                    |
+| Begriff | Definition |
 +=======================+===============================================+
-| *\<Begriff-1>*        | *\<Definition-1>*                             |
+| _\<Begriff-1>_ | _\<Definition-1>_ |
 +-----------------------+-----------------------------------------------+
-| *\<Begriff-2*         | *\<Definition-2>*                             |
+| _\<Begriff-2_ | _\<Definition-2>_ |
 +-----------------------+-----------------------------------------------+
