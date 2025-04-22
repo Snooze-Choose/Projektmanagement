@@ -150,10 +150,7 @@ _\<Whitebox-Template>_
 
 ## _\<Bezeichnung Laufzeitszenario 1>_ {#\_\_emphasis_bezeichnung_laufzeitszenario_1_emphasis}
 
-- \<hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
-
-- \<hier Besonderheiten bei dem Zusammenspiel der Bausteine in diesem
-  Szenario erläutern>
+[![Zustand der Bestellung](images/zustand_bestellung.png)](images/zustand_bestellung.png)
 
 ## _\<Bezeichnung Laufzeitszenario 2>_ {#\_\_emphasis_bezeichnung_laufzeitszenario_2_emphasis}
 
