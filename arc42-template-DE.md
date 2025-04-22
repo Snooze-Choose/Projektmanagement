@@ -66,6 +66,62 @@ Zur präzisen Definition der fachlichen Kontextabrenzung wurde ein UML-Diagramm 
 
 [![Whitebox Gesamtsystem](images/whitebox.png)](images/whitebox.png)
 
+Die dargestellte Grafik zeigt die interne Struktur des Gesamtsystems auf der höchsten Ebene und entspricht damit der Whitebox-Darstellung des Gesamtsystems gemäß Abschnitt 5 des arc42-Templates. Diese Ansicht dient dazu, die wesentlichen Subsysteme und deren Beziehungen untereinander sichtbar zu machen.
+
+Das Gesamtsystem ist in drei zentrale Subsysteme gegliedert:
+
+Shop
+
+Admin
+
+System
+
+Jedes dieser Subsysteme enthält mehrere Module, die bestimmte fachliche oder technische Aufgaben übernehmen.
+
+Subsystem "Shop"
+Dieses Subsystem bildet die Kernfunktionen des Onlineshops ab. Es besteht aus den Modulen:
+
+Produktübersicht: Zeigt Produkte für Endkunden an.
+
+Warenkorb: Ermöglicht das Sammeln von Produkten vor dem Kauf.
+
+Checkout: Abwicklung des Kaufprozesses.
+
+Zwischen den Modulen bestehen Zugriffsbeziehungen:
+Das Modul „Warenkorb“ greift auf die „Produktübersicht“ zu, während der „Checkout“ wiederum auf den „Warenkorb“ zugreift.
+
+Subsystem "Admin"
+Das Admin-Subsystem stellt Funktionen für die Verwaltung des Shops bereit. Es beinhaltet:
+
+Produktliste: Verwaltung und Anzeige aller Produkte.
+
+Produkteinstellungen: Konfiguration einzelner Produkte.
+
+Bestellübersicht: Einsicht in Bestellungen.
+
+Auch hier gibt es interne Zugriffsbeziehungen:
+Das Modul „Produkteinstellungen“ greift auf die „Produktliste“ zu.
+
+Subsystem "System"
+Dieses Subsystem enthält systemweite Konfigurationsmöglichkeiten:
+
+Benutzereinstellungen: Verwaltung nutzerspezifischer Einstellungen.
+
+Shop-Einstellungen: Zentrale Konfigurationen für den gesamten Shop.
+
+Subsystem-übergreifende Beziehungen
+Es existieren mehrere Import-Beziehungen zwischen den Subsystemen, welche die Abhängigkeiten und Schnittstellen-Nutzungen darstellen:
+
+Das Subsystem Shop importiert Funktionalitäten aus dem Subsystem System (z. B. Einstellungen).
+
+Auch das Subsystem Admin nutzt zentrale Funktionen des Subsystems System.
+
+Darüber hinaus importiert Admin auch Bestandteile aus dem Subsystem Shop, insbesondere im Zusammenhang mit Produktdaten.
+
+Diese Importbeziehungen sind in der Darstellung durch gestrichelte Pfeile mit dem Stereotyp <<import>> gekennzeichnet.
+
+## Blackbox Gesamtsystem {#\_blackbox_gesamtsystem}
+
 [![Blackbox Gesamtsystem](images/blackbox.png)](images/blackbox.png)
 
 # Laufzeitsicht {#section-runtime-view}
