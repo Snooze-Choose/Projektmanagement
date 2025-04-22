@@ -134,7 +134,7 @@ Diese externen Systeme sind als <<extern>> gekennzeichnet, was verdeutlicht, das
 
 # Laufzeitsicht 
 
-## _\<Zustände der Bestellung>_ 
+## Zustände der Bestellung 
 
 [![Zustand der Bestellung](images/zustand_bestellung.png)](images/zustand_bestellung.png)
 
@@ -148,7 +148,7 @@ Der finale Abschluss des Prozesses erfolgt in einem Endzustand, der sowohl von e
 
 Diese Laufzeitsicht ermöglicht ein klares Verständnis über die möglichen Abläufe und Alternativen innerhalb des Bestellprozesses.
 
-## _\<Klassenbibliothek>_ 
+## Klassenbibliothek
 
 [![Klassenbibliothek](images/class_diagramm.jpg)](images/class_diagramm.jpg)
 
@@ -180,7 +180,7 @@ Alle Microservices – OrderService, ProductService und AuthenticationService �
 
 # Querschnittliche Konzepte 
 
-## _\<Agiles Entwicklungskonzept>_ 
+## Agiles Entwicklungskonzept 
 
 Die Software soll innerhalb eines agilen Entwicklungskonzepts entwickelt werden. Für die Umsetzung der zuvor genannten Anforderungen werden Rollen benötigt, die die folgenden Funktionen erfüllen: Produktowner, Entwickler und Teamleiter. Die Verantwortung für die Definition der zu verarbeitenden Informationen im Rahmen des Auftrags obliegt dem Produkt Owner. Das Verfahren basiert auf der Durchführung von Sprints. Zu Beginn des Entwicklungsprozesses ist eine sorgfältige Planung des Sprints erforderlich, in dessen Verlauf der Teamleiter die Aufgaben an die Entwickler weiterleitet. Im Anschluss werden die Aufgaben von den Entwicklern erledigt und die Ergebnisse besprochen. Während des Sprints finden Meetings statt, in denen der Austausch der aktuellen Stände erfolgt. In der Konsequenz resultiert daraus ein effektives und effizientes System.
 
