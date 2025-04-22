@@ -140,13 +140,45 @@ Diese externen Systeme sind als <<extern>> gekennzeichnet, was verdeutlicht, das
 
 [![Zustand der Bestellung](images/zustand_bestellung.png)](images/zustand_bestellung.png)
 
+Das dargestellte Zustandsdiagramm zeigt die Laufzeitsicht einer Bestellung im System. Es beschreibt die dynamischen Verhaltensweisen und Zustandsänderungen einer Bestellung im Verlauf ihres Lebenszyklus – von der Erfassung bis zum endgültigen Abschluss. Die Visualisierung hilft dabei, Abläufe zu verstehen, Abhängigkeiten zwischen Prozessen zu erkennen und Fehlerfälle (z. B. Rücksendung oder Stornierung) gezielt zu behandeln.
+
+Eine Bestellung beginnt im Zustand „Bestellt“, nachdem der Kunde eine Bestellung im System ausgelöst hat. Nach erfolgreichem Zahlungseingang wechselt die Bestellung in den Zustand „Bezahlt“. Anschließend wird die Ware versendet, wodurch die Bestellung in den Zustand „Versandt“ übergeht. Kommt die Ware beim Kunden an, ist der Zustand „Zugestellt“ erreicht, was den regulären Abschluss eines Bestellvorgangs darstellt.
+
+Parallel dazu sind jedoch auch abweichende Abläufe möglich: Der Kunde kann die Bestellung stornieren, was direkt zum Zustand „Storniert“ führt. Wird die Bestellung zwar bezahlt, aber vom Kunden zurückgesendet, so geht sie zunächst in den Zustand „Rücksendung“ über. Nach erfolgreicher Bearbeitung der Rücksendung und Einleitung der Rückzahlung wird die Bestellung schließlich in den Zustand „Rückerstattet“ überführt.
+
+Der finale Abschluss des Prozesses erfolgt in einem Endzustand, der sowohl von einer erfolgreichen Zustellung als auch von einer Stornierung oder Rückerstattung erreicht werden kann.
+
+Diese Laufzeitsicht ermöglicht ein klares Verständnis über die möglichen Abläufe und Alternativen innerhalb des Bestellprozesses.
+
 ## _\<Klassenbibliothek>_ {#\_\_emphasis_klassenbibliothek_emphasis}
 
 [![Klassenbibliothek](images/class_diagramm.jpg)](images/class_diagramm.jpg)
 
+Das Klassendiagramm stellt ein einfaches System zur Verwaltung von Bestellungen und Produkten dar, wie es in einem Online-Shop verwendet werden könnte. Es umfasst die Klassen User, Order und Product sowie eine Enumeration Category.
+
+Ein User (Benutzer) besitzt eine eindeutige ID, einen Benutzernamen und eine E-Mail-Adresse. Jeder Benutzer kann null oder mehrere Bestellungen aufgeben. Diese Beziehung wird durch die Verbindung zwischen User und Order dargestellt, wobei ein Benutzer mit beliebig vielen Bestellungen verbunden sein kann. Umgekehrt gehört jede Bestellung genau einem Benutzer.
+
+Die Klasse Order (Bestellung) enthält ebenfalls eine eindeutige ID, die verwendete Zahlungsmethode sowie das Datum der Bestellung. Eine Bestellung kann aus mehreren Produkten bestehen, und ein Produkt kann wiederum in mehreren Bestellungen enthalten sein. Daraus ergibt sich eine Viele-zu-Viele-Beziehung zwischen den Klassen Order und Product.
+
+Ein Product (Produkt) ist durch eine ID, eine Mengenangabe, einen Preis und eine Bild-URL beschrieben. Jedes Produkt gehört genau einer Category (Kategorie) an. Die Kategorie ist als Enumeration dargestellt und umfasst die Werte „Haushalt“, „Technik“ und „Nahrung“. Ein Produkt kann keiner oder mehreren Bestellungen zugeordnet sein, gehört jedoch immer genau einer dieser Kategorien an.
+
 # Verteilungssicht {#section-deployment-view}
 
 [![Grobarchitektur](images/architektur.png)](images/architektur.png)
+
+Das gezeigte Diagramm stellt eine Microservice-Architektur für ein webbasiertes Shopsystem dar. Es zeigt die verschiedenen Komponenten, wie sie miteinander interagieren, und welche externen Dienste eingebunden sind. Hier ist eine zusammenhängende Erklärung:
+
+Ein Client, also ein Webbrowser auf einem Computer oder mobilen Gerät, greift auf zwei verschiedene Frontend-Dienste zu: den ShopfrontendService für Kunden und den AdminfrontendService für Administratoren. Beide Dienste laufen in Docker-Containern und basieren auf Node.js.
+
+Der ShopfrontendService kommuniziert mit dem ProductService, um Produktinformationen bereitzustellen, und mit dem OrderService, um Bestellungen aufzugeben. Diese Services greifen jeweils auf ihre eigenen Datenbanken zu: der ProductService auf die ProductDB und der OrderService auf die OrderDB.
+
+Zudem ist ein AuthenticationService vorhanden, der ebenfalls in einem Docker-Container läuft und Benutzer authentifiziert. Dieser Service nutzt die AuthDB zur Speicherung von Nutzerdaten und kann auch externe Authentifizierungsdienste wie Google und Apple einbinden.
+
+Der OrderService ist zudem mit einem externen Zahlungsanbieter – hier symbolisiert durch PayPal – verbunden, um Zahlungen abzuwickeln.
+
+Für Verwaltungs- und Analysezwecke steht außerdem ein pgAdmin zur Verfügung, das ebenfalls in einem Container läuft und auf die Datenbanken zugreifen kann.
+
+Alle Microservices – OrderService, ProductService und AuthenticationService – kommunizieren untereinander über einen Eventbus, was auf eine ereignisgesteuerte Architektur hinweist. Über diesen Eventbus können Änderungen und Ereignisse systemweit verteilt und verarbeitet werden, z. B. wenn eine neue Bestellung erstellt oder ein Produkt aktualisiert wird.
 
 # Querschnittliche Konzepte {#section-concepts}
 
