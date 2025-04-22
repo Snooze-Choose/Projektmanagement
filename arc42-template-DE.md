@@ -153,6 +153,7 @@ Diese Laufzeitsicht ermöglicht ein klares Verständnis über die möglichen Abl
 ## _\<Klassenbibliothek>_ {#\_\_emphasis_klassenbibliothek_emphasis}
 
 [![Klassenbibliothek](images/class_diagramm.jpg)](images/class_diagramm.jpg)
+
 Das Klassendiagramm stellt ein einfaches System zur Verwaltung von Bestellungen und Produkten dar, wie es in einem Online-Shop verwendet werden könnte. Es umfasst die Klassen User, Order und Product sowie eine Enumeration Category.
 
 Ein User (Benutzer) besitzt eine eindeutige ID, einen Benutzernamen und eine E-Mail-Adresse. Jeder Benutzer kann null oder mehrere Bestellungen aufgeben. Diese Beziehung wird durch die Verbindung zwischen User und Order dargestellt, wobei ein Benutzer mit beliebig vielen Bestellungen verbunden sein kann. Umgekehrt gehört jede Bestellung genau einem Benutzer.
