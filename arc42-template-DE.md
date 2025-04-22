@@ -112,6 +112,23 @@ Darüber hinaus importiert Shop auch Bestandteile aus dem Subsystem Admin, insbe
 
 [![Blackbox Gesamtsystem](images/blackbox.png)](images/blackbox.png)
 
+Die gezeigte Grafik stellt die Blackbox-Sicht auf das Subsystem „Shop“ dar. In dieser Sichtweise wird das System als abgegrenzte Einheit betrachtet, deren interne Struktur nur grob sichtbar ist. Der Fokus liegt vielmehr auf den externen Schnittstellen, den beteiligten Nachbarsystemen sowie den grundlegenden Funktionseinheiten innerhalb des Shops.
+
+Das Shopsystem bildet den Kern des Gesamtsystems und ist verantwortlich für alle zentralen Geschäftsprozesse wie die Produktverwaltung, die Bestellabwicklung und die Bereitstellung von Benutzer- und Admin-Oberflächen. Es setzt sich intern aus vier Hauptkomponenten zusammen:
+
+Produktservice: Verantwortlich für die Verwaltung und Bereitstellung von Produktinformationen.
+Bestellservice: Kümmert sich um die Annahme, Verarbeitung und Koordination von Bestellungen.
+Frontendservice: Stellt die Benutzeroberfläche für Endkunden zur Verfügung.
+Adminfrontendservice: Bietet Verwaltungsoberflächen für Administratoren.
+
+Diese internen Services kommunizieren untereinander, wobei beispielsweise der Frontendservice auf den Produktservice zugreift und der Adminfrontendservice mit dem Bestellservice interagiert.
+Darüber hinaus steht das Shopsystem in Verbindung mit mehreren externen Systemen, die über definierte Schnittstellen eingebunden sind:
+
+Ein Zahlsystem, bestehend aus den Modulen Paypal und Kreditkarte, wird vom Bestellservice angesprochen, um Zahlungen abzuwickeln.
+Ein Versandsystem, hier repräsentiert durch den Anbieter DHL, wird ebenfalls vom Bestellservice genutzt, um Versandprozesse auszulösen.
+
+Diese externen Systeme sind als <<extern>> gekennzeichnet, was verdeutlicht, dass sie außerhalb der Verantwortung des Shops liegen, jedoch über wichtige Schnittstellen in die Geschäftsprozesse integriert sind.
+
 # Laufzeitsicht {#section-runtime-view}
 
 ## _\<Zustände der Bestellung>_ {#\_\_emphasis_zustand_der_bestellung_emphasis}
