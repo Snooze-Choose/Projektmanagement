@@ -166,6 +166,20 @@ Ein Product (Produkt) ist durch eine ID, eine Mengenangabe, einen Preis und eine
 
 [![Grobarchitektur](images/architektur.png)](images/architektur.png)
 
+Das gezeigte Diagramm stellt eine Microservice-Architektur für ein webbasiertes Shopsystem dar. Es zeigt die verschiedenen Komponenten, wie sie miteinander interagieren, und welche externen Dienste eingebunden sind. Hier ist eine zusammenhängende Erklärung:
+
+Ein Client, also ein Webbrowser auf einem Computer oder mobilen Gerät, greift auf zwei verschiedene Frontend-Dienste zu: den ShopfrontendService für Kunden und den AdminfrontendService für Administratoren. Beide Dienste laufen in Docker-Containern und basieren auf Node.js.
+
+Der ShopfrontendService kommuniziert mit dem ProductService, um Produktinformationen bereitzustellen, und mit dem OrderService, um Bestellungen aufzugeben. Diese Services greifen jeweils auf ihre eigenen Datenbanken zu: der ProductService auf die ProductDB und der OrderService auf die OrderDB.
+
+Zudem ist ein AuthenticationService vorhanden, der ebenfalls in einem Docker-Container läuft und Benutzer authentifiziert. Dieser Service nutzt die AuthDB zur Speicherung von Nutzerdaten und kann auch externe Authentifizierungsdienste wie Google und Apple einbinden.
+
+Der OrderService ist zudem mit einem externen Zahlungsanbieter – hier symbolisiert durch PayPal – verbunden, um Zahlungen abzuwickeln.
+
+Für Verwaltungs- und Analysezwecke steht außerdem ein pgAdmin zur Verfügung, das ebenfalls in einem Container läuft und auf die Datenbanken zugreifen kann.
+
+Alle Microservices – OrderService, ProductService und AuthenticationService – kommunizieren untereinander über einen Eventbus, was auf eine ereignisgesteuerte Architektur hinweist. Über diesen Eventbus können Änderungen und Ereignisse systemweit verteilt und verarbeitet werden, z. B. wenn eine neue Bestellung erstellt oder ein Produkt aktualisiert wird.
+
 # Querschnittliche Konzepte {#section-concepts}
 
 ## _\<Konzept 1>_ {#\_\_emphasis_konzept_1_emphasis}
