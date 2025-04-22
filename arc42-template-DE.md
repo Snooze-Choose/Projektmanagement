@@ -144,10 +144,6 @@ Diese externen Systeme sind als <<extern>> gekennzeichnet, was verdeutlicht, das
 
 [![Klassenbibliothek](images/class_diagramm.jpg)](images/class_diagramm.jpg)
 
-## _\<Bezeichnung Laufzeitszenario n>_ {#\_\_emphasis_bezeichnung_laufzeitszenario_n_emphasis}
-
-...
-
 # Verteilungssicht {#section-deployment-view}
 
 [![Grobarchitektur](images/architektur.png)](images/architektur.png)
