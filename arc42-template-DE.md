@@ -61,15 +61,7 @@ Zur präzisen Definition der fachlichen Kontextabrenzung wurde ein UML-Diagramm 
 
 Im Mittelpunkt steht die Komponente „Shop“, die die zentralen Funktionalitäten umfasst. Dazu gehören:
 
-Produktauswahl,
-
-Warenkorb,
-
-Checkout (Bezahlvorgang),
-
-Benutzerverwaltung und
-
-Auftragsverwaltung.
+Produktauswahl, Warenkorb, Checkout (Bezahlvorgang), Benutzerverwaltung und Auftragsverwaltung.
 
 Diese Shop-Komponente wird von verschiedenen externen Akteuren genutzt oder unterstützt:
 
