@@ -10,8 +10,6 @@ Template Version 8.2 DE. (basiert auf AsciiDoc Version), Januar 2023
 Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
 contributors. Siehe <https://arc42.org>.
 
-[![Grobarchitektur](images/architektur.png)](images/architektur.png)
-
 # Einführung und Ziele {#section-introduction-and-goals}
 
 ## Aufgabenstellung {#\_aufgabenstellung}
@@ -39,11 +37,14 @@ Die Projektziele finden sich im [hier](https://github.com/Snooze-Choose/Projektm
 
 ## Technische Randbedingungen {#\_technische_Randbedingungen}
 
-C# .NET Web-API Core mit Entity Framework (OR-Mapper)
-Datenbank: PostgreSQL
-Frontend: Typescript Vue.js
-.NET Aspire Service Discovery
-Docker
+| Komponente        | Technologie           |
+| ----------------- | --------------------- |
+| Backend           | C# .NET Web API Core  |
+| ORM               | Entity Framework Core |
+| Datenbank         | PostgreSQL            |
+| Frontend          | TypeScript + Vue.js   |
+| Service Discovery | .NET Aspire           |
+| Containerisierung | Docker                |
 
 ## Organisatorische Randbedingungen {#\_organisatorische_Randbedingungen}
 
@@ -148,7 +149,7 @@ _\<Whitebox-Template>_
 
 # Laufzeitsicht {#section-runtime-view}
 
-## _\<Bezeichnung Laufzeitszenario 1>_ {#\_\_emphasis_bezeichnung_laufzeitszenario_1_emphasis}
+## _\<Zustände der Bestellung>_ {#\_\_emphasis_zustand_der_bestellung_emphasis}
 
 [![Zustand der Bestellung](images/zustand_bestellung.png)](images/zustand_bestellung.png)
 
@@ -162,37 +163,7 @@ _\<Whitebox-Template>_
 
 # Verteilungssicht {#section-deployment-view}
 
-## Infrastruktur Ebene 1 {#\_infrastruktur_ebene_1}
-
-**_\<Übersichtsdiagramm>_**
-
-Begründung
-
-: _\<Erläuternder Text>_
-
-Qualitäts- und/oder Leistungsmerkmale
-
-: _\<Erläuternder Text>_
-
-Zuordnung von Bausteinen zu Infrastruktur
-
-: _\<Beschreibung der Zuordnung>_
-
-## Infrastruktur Ebene 2 {#\_infrastruktur_ebene_2}
-
-### _\<Infrastrukturelement 1>_ {#\_\_emphasis_infrastrukturelement_1_emphasis}
-
-_\<Diagramm + Erläuterungen>_
-
-### _\<Infrastrukturelement 2>_ {#\_\_emphasis_infrastrukturelement_2_emphasis}
-
-_\<Diagramm + Erläuterungen>_
-
-...
-
-### _\<Infrastrukturelement n>_ {#\_\_emphasis_infrastrukturelement_n_emphasis}
-
-_\<Diagramm + Erläuterungen>_
+[![Grobarchitektur](images/architektur.png)](images/architektur.png)
 
 # Querschnittliche Konzepte {#section-concepts}
 
