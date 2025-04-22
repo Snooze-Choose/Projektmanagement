@@ -60,19 +60,18 @@ Zur präzisen Definition der fachlichen Kontextabrenzung wurde ein UML-Diagramm 
 [![Fachlicher Kontext](images/fachlicher_context.png)](images/fachlicher_context.png)
 
 Im Mittelpunkt steht die Komponente „Shop“, die die zentralen Funktionalitäten umfasst. Dazu gehören:
-
 Produktauswahl, Warenkorb, Checkout (Bezahlvorgang), Benutzerverwaltung und Auftragsverwaltung.
 
 Diese Shop-Komponente wird von verschiedenen externen Akteuren genutzt oder unterstützt:
 
 1. Kunden
-Kunden sind typische Endnutzer des Shops. Sie greifen über eine <<access>>-Beziehung auf das System zu, um Produkte auszuwählen, in den Warenkorb zu legen, zu bezahlen und Bestellungen zu verwalten.
+Kunden sind typische Endnutzer des Shops. Sie greifen über eine access-Beziehung auf das System zu, um Produkte auszuwählen, in den Warenkorb zu legen, zu bezahlen und Bestellungen zu verwalten.
 
 2. Shop-Admin
 Der Shop-Administrator greift ebenfalls auf den Shop zu, allerdings meist mit erweiterten Rechten. Der Admin übernimmt Aufgaben wie das Verwalten von Benutzerkonten, Produkten oder Bestellungen.
 
 3. Authentifizierungsdienste (extern)
-Externe Anbieter wie Google, Microsoft oder Apple bieten Authentifizierungsdienste an. Der Shop greift auf diese Dienste zu (<<access>>), um eine sichere Anmeldung der Benutzer über bestehende Konten zu ermöglichen (z. B. „Login mit Google“).
+Externe Anbieter wie Google, Microsoft oder Apple bieten Authentifizierungsdienste an. Der Shop greift auf diese Dienste zu, um eine sichere Anmeldung der Benutzer über bestehende Konten zu ermöglichen (z. B. „Login mit Google“).
 
 4. Zahlungsdienstleister (extern)
 Auch Zahlungsdienste wie PayPal oder Kreditkartenanbieter sind externe Systeme, mit denen der Shop kommuniziert. Diese werden beim Checkout-Prozess eingebunden, um Zahlungen sicher und reibungslos abzuwickeln.
