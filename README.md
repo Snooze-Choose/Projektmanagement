@@ -1,12 +1,14 @@
 # Snooze & Choose
 
-Snooze & Choose ist ein moderner eCommerce-Webshop, der entwickelt wurde, um Benutzern eine benutzerfreundliche und effiziente Möglichkeit zu bieten, Produkte online zu kaufen.
+In dieser README.md sind alle Abgaben referenziert.
 
 # Auflistungen aller Abgaben:
+
 ## Pitch-Präsentation
 Link: https://github.com/Snooze-Choose/Projektmanagement/blob/main/Pr%C3%A4sentation_30.01.2025.pdf
 
-## Präsentation
+## Abschlusspräsentation
+Link: https://github.com/Snooze-Choose/Projektmanagement/blob/main/Abschlusspr%C3%A4sentation_Snooze_Choose.pdf
 
 ## Prioritized Backlog
 Link: https://github.com/orgs/Snooze-Choose/projects/6/views/3
