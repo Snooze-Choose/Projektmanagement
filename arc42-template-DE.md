@@ -198,12 +198,14 @@ der online-Dokumentation (auf Englisch!).
 
 # Risiken und technische Schulden {#section-technical-risks}
 
-# Glossar {#section-glossary}
+### Risiko: Geringe Nutzerakzeptanz des Shops
 
-+-----------------------+-----------------------------------------------+
-| Begriff | Definition |
-+=======================+===============================================+
-| _\<Begriff-1>_ | _\<Definition-1>_ |
-+-----------------------+-----------------------------------------------+
-| _\<Begriff-2_ | _\<Definition-2>_ |
-+-----------------------+-----------------------------------------------+
+- **Beschreibung:** Es besteht das Risiko, dass der entwickelte Shop von der Zielgruppe nicht wie erwartet angenommen wird. Mögliche Ursachen können eine unzureichende Nutzerführung, fehlende Funktionen, mangelnde Performance oder ein nicht zielgruppengerechtes Design sein.
+- **Auswirkungen:** Geringe Nutzerzahlen, niedrige Conversion-Rate, wirtschaftlicher Misserfolg des Produkts. Hoher Anpassungsaufwand nach dem Go-live zur Nachbesserung.
+- **Gegenmaßnahmen:**
+  - Frühzeitige Einbindung von Endnutzern durch Usability-Tests und Feedbackzyklen (z. B. Prototypentests, A/B-Tests).
+  - Iterative Entwicklung mit MVP-Ansatz und klar definierten Akzeptanzkriterien.
+  - Analyse von Konkurrenzprodukten und Nutzerverhalten.
+- **Technische Schulden:** Möglicherweise müssen grundlegende Architektur- oder Designentscheidungen überarbeitet werden, falls sich im Live-Betrieb fundamentale Nutzungsprobleme zeigen. Dies kann zu erhöhtem Refactoring-Aufwand führen.
+
+# Glossar {#section-glossary}
