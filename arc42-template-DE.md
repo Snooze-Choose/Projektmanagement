@@ -55,6 +55,7 @@ Die Sprintplanung, Reviews und Retrospektiven finden regelmäßig gemäß dem Sc
 
 # Kontextabgrenzung {#section-context-and-scope}
 Zur präzisen Definition der fachlichen Kontextabrenzung wurde ein UML-Diagramm erstellt, welches sämtliche Kommunikationsbeziehungen mit dem System festlegt.
+
 [![Fachlicher Kontext](images/fachlicher_context.png)](images/fachlicher_context.png)
 
 # Lösungsstrategie {#section-solution-strategy}
