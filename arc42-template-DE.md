@@ -58,6 +58,31 @@ Die Sprintplanung, Reviews und Retrospektiven finden regelmäßig gemäß dem Sc
 Zur präzisen Definition der fachlichen Kontextabrenzung wurde ein UML-Diagramm erstellt, welches sämtliche Kommunikationsbeziehungen mit dem System festlegt.
 
 [![Fachlicher Kontext](images/fachlicher_context.png)](images/fachlicher_context.png)
+Im Mittelpunkt steht die Komponente „Shop“, die die zentralen Funktionalitäten umfasst. Dazu gehören:
+
+Produktauswahl,
+
+Warenkorb,
+
+Checkout (Bezahlvorgang),
+
+Benutzerverwaltung und
+
+Auftragsverwaltung.
+
+Diese Shop-Komponente wird von verschiedenen externen Akteuren genutzt oder unterstützt:
+
+1. Kunden
+Kunden sind typische Endnutzer des Shops. Sie greifen über eine <<access>>-Beziehung auf das System zu, um Produkte auszuwählen, in den Warenkorb zu legen, zu bezahlen und Bestellungen zu verwalten.
+
+2. Shop-Admin
+Der Shop-Administrator greift ebenfalls auf den Shop zu, allerdings meist mit erweiterten Rechten. Der Admin übernimmt Aufgaben wie das Verwalten von Benutzerkonten, Produkten oder Bestellungen.
+
+3. Authentifizierungsdienste (extern)
+Externe Anbieter wie Google, Microsoft oder Apple bieten Authentifizierungsdienste an. Der Shop greift auf diese Dienste zu (<<access>>), um eine sichere Anmeldung der Benutzer über bestehende Konten zu ermöglichen (z. B. „Login mit Google“).
+
+4. Zahlungsdienstleister (extern)
+Auch Zahlungsdienste wie PayPal oder Kreditkartenanbieter sind externe Systeme, mit denen der Shop kommuniziert. Diese werden beim Checkout-Prozess eingebunden, um Zahlungen sicher und reibungslos abzuwickeln.
 
 # Bausteinsicht 
 
@@ -65,7 +90,7 @@ Zur präzisen Definition der fachlichen Kontextabrenzung wurde ein UML-Diagramm 
 
 [![Whitebox Gesamtsystem](images/whitebox.png)](images/whitebox.png)
 
-Die dargestellte Grafik zeigt die interne Struktur des Gesamtsystems auf der höchsten Ebene und entspricht damit der Whitebox-Darstellung des Gesamtsystems gemäß Abschnitt 5 des arc42-Templates. Diese Ansicht dient dazu, die wesentlichen Subsysteme und deren Beziehungen untereinander sichtbar zu machen.
+Diese Ansicht dient dazu, die wesentlichen Subsysteme und deren Beziehungen untereinander sichtbar zu machen.
 
 Das Gesamtsystem ist in drei zentrale Subsysteme gegliedert:
 
@@ -115,7 +140,7 @@ Darüber hinaus importiert Shop auch Bestandteile aus dem Subsystem Admin, insbe
 
 [![Blackbox Gesamtsystem](images/blackbox.png)](images/blackbox.png)
 
-Die gezeigte Grafik stellt die Blackbox-Sicht auf das Subsystem „Shop“ dar. In dieser Sichtweise wird das System als abgegrenzte Einheit betrachtet, deren interne Struktur nur grob sichtbar ist. Der Fokus liegt vielmehr auf den externen Schnittstellen, den beteiligten Nachbarsystemen sowie den grundlegenden Funktionseinheiten innerhalb des Shops.
+Die Abbildung des Blackbox Gesamsystem stellt die Blackbox-Sicht auf das Subsystem „Shop“ dar. In dieser Sichtweise wird das System als abgegrenzte Einheit betrachtet, deren interne Struktur nur grob sichtbar ist. Der Fokus liegt vielmehr auf den externen Schnittstellen, den beteiligten Nachbarsystemen sowie den grundlegenden Funktionseinheiten innerhalb des Shops.
 
 Das Shopsystem bildet den Kern des Gesamtsystems und ist verantwortlich für alle zentralen Geschäftsprozesse wie die Produktverwaltung, die Bestellabwicklung und die Bereitstellung von Benutzer- und Admin-Oberflächen. Es setzt sich intern aus vier Hauptkomponenten zusammen:
 
@@ -130,7 +155,7 @@ Darüber hinaus steht das Shopsystem in Verbindung mit mehreren externen Systeme
 Ein Zahlsystem, bestehend aus den Modulen Paypal und Kreditkarte, wird vom Bestellservice angesprochen, um Zahlungen abzuwickeln.
 Ein Versandsystem, hier repräsentiert durch den Anbieter DHL, wird ebenfalls vom Bestellservice genutzt, um Versandprozesse auszulösen.
 
-Diese externen Systeme sind als <<extern>> gekennzeichnet, was verdeutlicht, dass sie außerhalb der Verantwortung des Shops liegen, jedoch über wichtige Schnittstellen in die Geschäftsprozesse integriert sind.
+Die externen Systeme liegen außerhalb des Shops, sind jedoch über wichtige Schnittstellen in die Geschäftsprozesse integriert.
 
 # Laufzeitsicht 
 
@@ -138,7 +163,7 @@ Diese externen Systeme sind als <<extern>> gekennzeichnet, was verdeutlicht, das
 
 [![Zustand der Bestellung](images/zustand_bestellung.png)](images/zustand_bestellung.png)
 
-Das dargestellte Zustandsdiagramm zeigt die Laufzeitsicht einer Bestellung im System. Es beschreibt die dynamischen Verhaltensweisen und Zustandsänderungen einer Bestellung im Verlauf ihres Lebenszyklus – von der Erfassung bis zum endgültigen Abschluss. Die Visualisierung hilft dabei, Abläufe zu verstehen, Abhängigkeiten zwischen Prozessen zu erkennen und Fehlerfälle (z. B. Rücksendung oder Stornierung) gezielt zu behandeln.
+Das dargestellte Zustandsdiagramm zeigt die Laufzeitsicht einer Bestellung im System. Es beschreibt die dynamischen Verhaltensweisen und Zustandsänderungen einer Bestellung im Verlauf ihres Lebenszyklus von der Erfassung bis zum endgültigen Abschluss.
 
 Eine Bestellung beginnt im Zustand „Bestellt“, nachdem der Kunde eine Bestellung im System ausgelöst hat. Nach erfolgreichem Zahlungseingang wechselt die Bestellung in den Zustand „Bezahlt“. Anschließend wird die Ware versendet, wodurch die Bestellung in den Zustand „Versandt“ übergeht. Kommt die Ware beim Kunden an, ist der Zustand „Zugestellt“ erreicht, was den regulären Abschluss eines Bestellvorgangs darstellt.
 
@@ -152,11 +177,11 @@ Diese Laufzeitsicht ermöglicht ein klares Verständnis über die möglichen Abl
 
 [![Klassenbibliothek](images/class_diagramm.jpg)](images/class_diagramm.jpg)
 
-Das Klassendiagramm stellt ein einfaches System zur Verwaltung von Bestellungen und Produkten dar, wie es in einem Online-Shop verwendet werden könnte. Es umfasst die Klassen User, Order und Product sowie eine Enumeration Category.
+Das Klassendiagramm stellt ein einfaches System zur Verwaltung von Bestellungen und Produkten dar. Es umfasst die Klassen User, Order und Product sowie eine Enumeration Category.
 
 Ein User (Benutzer) besitzt eine eindeutige ID, einen Benutzernamen und eine E-Mail-Adresse. Jeder Benutzer kann null oder mehrere Bestellungen aufgeben. Diese Beziehung wird durch die Verbindung zwischen User und Order dargestellt, wobei ein Benutzer mit beliebig vielen Bestellungen verbunden sein kann. Umgekehrt gehört jede Bestellung genau einem Benutzer.
 
-Die Klasse Order (Bestellung) enthält ebenfalls eine eindeutige ID, die verwendete Zahlungsmethode sowie das Datum der Bestellung. Eine Bestellung kann aus mehreren Produkten bestehen, und ein Produkt kann wiederum in mehreren Bestellungen enthalten sein. Daraus ergibt sich eine Viele-zu-Viele-Beziehung zwischen den Klassen Order und Product.
+Die Klasse Order (Bestellung) enthält ebenfalls eine eindeutige ID, die verwendete Zahlungsmethode sowie das Datum der Bestellung. Eine Bestellung kann aus mehreren Produkten bestehen, und ein Produkt kann wiederum in mehreren Bestellungen enthalten sein. Daraus ergibt sich eine n:m Beziehung zwischen den Klassen Order und Product.
 
 Ein Product (Produkt) ist durch eine ID, eine Mengenangabe, einen Preis und eine Bild-URL beschrieben. Jedes Produkt gehört genau einer Category (Kategorie) an. Die Kategorie ist als Enumeration dargestellt und umfasst die Werte „Haushalt“, „Technik“ und „Nahrung“. Ein Produkt kann keiner oder mehreren Bestellungen zugeordnet sein, gehört jedoch immer genau einer dieser Kategorien an.
 
@@ -164,19 +189,19 @@ Ein Product (Produkt) ist durch eine ID, eine Mengenangabe, einen Preis und eine
 
 [![Grobarchitektur](images/architektur.png)](images/architektur.png)
 
-Das gezeigte Diagramm stellt eine Microservice-Architektur für ein webbasiertes Shopsystem dar. Es zeigt die verschiedenen Komponenten, wie sie miteinander interagieren, und welche externen Dienste eingebunden sind.
+Das Architekturdiagramm stellt eine Microservice-Architektur für das webbasierte Shopsystem dar. Es zeigt die verschiedenen Komponenten, wie sie miteinander interagieren, und welche externen Dienste eingebunden sind.
 
-Ein Client, also ein Webbrowser auf einem Computer oder mobilen Gerät, greift auf zwei verschiedene Frontend-Dienste zu: den ShopfrontendService für Kunden und den AdminfrontendService für Administratoren. Beide Dienste laufen in Docker-Containern und basieren auf Node.js.
+Ein Client, also ein Webbrowser auf einem Computer oder mobilen Gerät, greift auf zwei verschiedene Frontend-Dienste zu. Einmal den ShopfrontendService für Kunden und den AdminfrontendService für Administratoren. Beide Dienste laufen in Docker-Containern und basieren auf Node.js.
 
-Der ShopfrontendService kommuniziert mit dem ProductService, um Produktinformationen bereitzustellen, und mit dem OrderService, um Bestellungen aufzugeben. Diese Services greifen jeweils auf ihre eigenen Datenbanken zu: der ProductService auf die ProductDB und der OrderService auf die OrderDB.
+Der ShopfrontendService kommuniziert mit dem ProductService, um Produktinformationen bereitzustellen, und mit dem OrderService, um Bestellungen aufzugeben. Diese Services greifen jeweils auf ihre eigenen Datenbanken zu. Der ProductService auf die ProductDB und der OrderService auf die OrderDB.
 
 Zudem ist ein AuthenticationService vorhanden, der ebenfalls in einem Docker-Container läuft und Benutzer authentifiziert. Dieser Service nutzt die AuthDB zur Speicherung von Nutzerdaten und kann auch externe Authentifizierungsdienste wie Google und Apple einbinden.
 
-Der OrderService ist zudem mit einem externen Zahlungsanbieter – hier symbolisiert durch PayPal – verbunden, um Zahlungen abzuwickeln.
+Der OrderService ist zudem mit einem externen Zahlungsanbieter, hier symbolisiert durch PayPal, verbunden, um Zahlungen abzuwickeln.
 
 Für Verwaltungs- und Analysezwecke steht außerdem ein pgAdmin zur Verfügung, das ebenfalls in einem Container läuft und auf die Datenbanken zugreifen kann.
 
-Alle Microservices – OrderService, ProductService und AuthenticationService – kommunizieren untereinander über einen Eventbus, was auf eine ereignisgesteuerte Architektur hinweist. Über diesen Eventbus können Änderungen und Ereignisse systemweit verteilt und verarbeitet werden, z. B. wenn eine neue Bestellung erstellt oder ein Produkt aktualisiert wird.
+Alle Microservices, OrderService, ProductService und AuthenticationService, kommunizieren untereinander über einen Eventbus. Über diesen Eventbus können Änderungen und Ereignisse systemweit verteilt und verarbeitet werden, z. B. wenn eine neue Bestellung erstellt oder ein Produkt aktualisiert wird.
 
 # Querschnittliche Konzepte 
 
