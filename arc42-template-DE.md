@@ -54,6 +54,7 @@ Rollen wie Product Owner, Scrum Master und Entwicklungsteam sind definiert und b
 Die Sprintplanung, Reviews und Retrospektiven finden regelmäßig gemäß dem Scrum-Framework statt.
 
 # Kontextabgrenzung {#section-context-and-scope}
+Zur präzisen Definition der fachlichen Kontextabrenzung wurde ein UML-Diagramm erstellt, welches sämtliche Kommunikationsbeziehungen mit dem System festlegt.
 
 [![Fachlicher Kontext](images/fachlicher_context.png)](images/fachlicher_context.png)
 
@@ -65,7 +66,68 @@ Die Sprintplanung, Reviews und Retrospektiven finden regelmäßig gemäß dem Sc
 
 [![Whitebox Gesamtsystem](images/whitebox.png)](images/whitebox.png)
 
+Die dargestellte Grafik zeigt die interne Struktur des Gesamtsystems auf der höchsten Ebene und entspricht damit der Whitebox-Darstellung des Gesamtsystems gemäß Abschnitt 5 des arc42-Templates. Diese Ansicht dient dazu, die wesentlichen Subsysteme und deren Beziehungen untereinander sichtbar zu machen.
+
+Das Gesamtsystem ist in drei zentrale Subsysteme gegliedert:
+  - Shop
+  - Admin
+  - System
+
+Jedes dieser Subsysteme enthält mehrere Module, die bestimmte fachliche oder technische Aufgaben übernehmen.
+
+### Subsystem "Shop":
+Dieses Subsystem bildet die Kernfunktionen des Onlineshops ab. Es besteht aus den Modulen:
+
+  Produktübersicht: Zeigt Produkte für Endkunden an.
+  Warenkorb: Ermöglicht das Sammeln von Produkten vor dem Kauf.
+  Checkout: Abwicklung des Kaufprozesses.
+  
+Zwischen den Modulen bestehen Zugriffsbeziehungen:
+Das Modul „Warenkorb“ greift auf die „Produktübersicht“ zu, während der „Checkout“ wiederum auf den „Warenkorb“ zugreift.
+
+### Subsystem "Admin":
+Das Admin-Subsystem stellt Funktionen für die Verwaltung des Shops bereit. Es beinhaltet:
+
+  Produktliste: Verwaltung und Anzeige aller Produkte.
+  Produkteinstellungen: Konfiguration einzelner Produkte.
+  Bestellübersicht: Einsicht in Bestellungen.
+
+Auch hier gibt es interne Zugriffsbeziehungen:
+Das Modul „Produkteinstellungen“ greift auf die „Produktliste“ zu.
+
+### Subsystem "System"
+Dieses Subsystem enthält systemweite Konfigurationsmöglichkeiten:
+
+Benutzereinstellungen: Verwaltung nutzerspezifischer Einstellungen.
+Shop-Einstellungen: Zentrale Konfigurationen für den gesamten Shop.
+
+Subsystem-übergreifende Beziehungen
+Es existieren mehrere Import-Beziehungen zwischen den Subsystemen, welche die Abhängigkeiten und Schnittstellen-Nutzungen darstellen:
+
+Das Subsystem Shop importiert Funktionalitäten aus dem Subsystem System (z. B. Einstellungen).
+Auch das Subsystem Admin nutzt zentrale Funktionen des Subsystems System.
+Darüber hinaus importiert Shop auch Bestandteile aus dem Subsystem Admin, insbesondere im Zusammenhang mit Produktdaten.
+
+## Blackbox Gesamtsystem {#\_blackbox_gesamtsystem}
+
 [![Blackbox Gesamtsystem](images/blackbox.png)](images/blackbox.png)
+
+Die gezeigte Grafik stellt die Blackbox-Sicht auf das Subsystem „Shop“ dar. In dieser Sichtweise wird das System als abgegrenzte Einheit betrachtet, deren interne Struktur nur grob sichtbar ist. Der Fokus liegt vielmehr auf den externen Schnittstellen, den beteiligten Nachbarsystemen sowie den grundlegenden Funktionseinheiten innerhalb des Shops.
+
+Das Shopsystem bildet den Kern des Gesamtsystems und ist verantwortlich für alle zentralen Geschäftsprozesse wie die Produktverwaltung, die Bestellabwicklung und die Bereitstellung von Benutzer- und Admin-Oberflächen. Es setzt sich intern aus vier Hauptkomponenten zusammen:
+
+Produktservice: Verantwortlich für die Verwaltung und Bereitstellung von Produktinformationen.
+Bestellservice: Kümmert sich um die Annahme, Verarbeitung und Koordination von Bestellungen.
+Frontendservice: Stellt die Benutzeroberfläche für Endkunden zur Verfügung.
+Adminfrontendservice: Bietet Verwaltungsoberflächen für Administratoren.
+
+Diese internen Services kommunizieren untereinander, wobei beispielsweise der Frontendservice auf den Produktservice zugreift und der Adminfrontendservice mit dem Bestellservice interagiert.
+Darüber hinaus steht das Shopsystem in Verbindung mit mehreren externen Systemen, die über definierte Schnittstellen eingebunden sind:
+
+Ein Zahlsystem, bestehend aus den Modulen Paypal und Kreditkarte, wird vom Bestellservice angesprochen, um Zahlungen abzuwickeln.
+Ein Versandsystem, hier repräsentiert durch den Anbieter DHL, wird ebenfalls vom Bestellservice genutzt, um Versandprozesse auszulösen.
+
+Diese externen Systeme sind als <<extern>> gekennzeichnet, was verdeutlicht, dass sie außerhalb der Verantwortung des Shops liegen, jedoch über wichtige Schnittstellen in die Geschäftsprozesse integriert sind.
 
 # Laufzeitsicht {#section-runtime-view}
 
