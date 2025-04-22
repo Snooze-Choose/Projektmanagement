@@ -55,17 +55,7 @@ Die Sprintplanung, Reviews und Retrospektiven finden regelmäßig gemäß dem Sc
 
 # Kontextabgrenzung {#section-context-and-scope}
 
-## Fachlicher Kontext {#\_fachlicher_kontext}
-
 [![Fachlicher Kontext](images/fachlicher_context.png)](images/fachlicher_context.png)
-
-## Technischer Kontext {#\_technischer_kontext}
-
-**\<Diagramm oder Tabelle>**
-
-**\<optional: Erläuterung der externen technischen Schnittstellen>**
-
-**\<Mapping fachliche auf technische Schnittstellen>**
 
 # Lösungsstrategie {#section-solution-strategy}
 
