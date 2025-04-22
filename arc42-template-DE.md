@@ -73,9 +73,9 @@ Die Sprintplanung, Reviews und Retrospektiven finden regelmäßig gemäß dem Sc
 
 [![Zustand der Bestellung](images/zustand_bestellung.png)](images/zustand_bestellung.png)
 
-## _\<Bezeichnung Laufzeitszenario 2>_ {#\_\_emphasis_bezeichnung_laufzeitszenario_2_emphasis}
+## _\<Klassenbibliothek>_ {#\_\_emphasis_klassenbibliothek_emphasis}
 
-...
+[![Klassenbibliothek](images/class_diagramm.png)](images/class_diagramm.png)
 
 ## _\<Bezeichnung Laufzeitszenario n>_ {#\_\_emphasis_bezeichnung_laufzeitszenario_n_emphasis}
 
