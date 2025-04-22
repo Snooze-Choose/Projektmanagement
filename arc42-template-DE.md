@@ -75,77 +75,7 @@ Die Sprintplanung, Reviews und Retrospektiven finden regelmäßig gemäß dem Sc
 
 [![Whitebox Gesamtsystem](images/whitebox.png)](images/whitebox.png)
 
-**_\<Übersichtsdiagramm>_**
-
-Begründung
-
-: _\<Erläuternder Text>_
-
-Enthaltene Bausteine
-
-: _\<Beschreibung der enthaltenen Bausteine (Blackboxen)>_
-
-Wichtige Schnittstellen
-
-: _\<Beschreibung wichtiger Schnittstellen>_
-
-### \<Name Blackbox 1> {#\_\_name_blackbox_1}
-
-_\<Zweck/Verantwortung>_
-
-_\<Schnittstelle(n)>_
-
-_\<(Optional) Qualitäts-/Leistungsmerkmale>_
-
-_\<(Optional) Ablageort/Datei(en)>_
-
-_\<(Optional) Erfüllte Anforderungen>_
-
-_\<(optional) Offene Punkte/Probleme/Risiken>_
-
-### \<Name Blackbox 2> {#\_\_name_blackbox_2}
-
-_\<Blackbox-Template>_
-
-### \<Name Blackbox n> {#\_\_name_blackbox_n}
-
-_\<Blackbox-Template>_
-
-### \<Name Schnittstelle 1> {#\_\_name_schnittstelle_1}
-
-...
-
-### \<Name Schnittstelle m> {#\_\_name_schnittstelle_m}
-
-## Ebene 2 {#\_ebene_2}
-
-### Whitebox _\<Baustein 1>_ {#\_whitebox_emphasis_baustein_1_emphasis}
-
-_\<Whitebox-Template>_
-
-### Whitebox _\<Baustein 2>_ {#\_whitebox_emphasis_baustein_2_emphasis}
-
-_\<Whitebox-Template>_
-
-...
-
-### Whitebox _\<Baustein m>_ {#\_whitebox_emphasis_baustein_m_emphasis}
-
-_\<Whitebox-Template>_
-
-## Ebene 3 {#\_ebene_3}
-
-### Whitebox \<\_Baustein x.1\_\> {#\_whitebox_baustein_x_1}
-
-_\<Whitebox-Template>_
-
-### Whitebox \<\_Baustein x.2\_\> {#\_whitebox_baustein_x_2}
-
-_\<Whitebox-Template>_
-
-### Whitebox \<\_Baustein y.1\_\> {#\_whitebox_baustein_y_1}
-
-_\<Whitebox-Template>_
+[![Blackbox Gesamtsystem](images/blackbox.png)](images/blackbox.png)
 
 # Laufzeitsicht {#section-runtime-view}
 
@@ -168,16 +98,6 @@ _\<Whitebox-Template>_
 # Querschnittliche Konzepte {#section-concepts}
 
 ## _\<Konzept 1>_ {#\_\_emphasis_konzept_1_emphasis}
-
-_\<Erklärung>_
-
-## _\<Konzept 2>_ {#\_\_emphasis_konzept_2_emphasis}
-
-_\<Erklärung>_
-
-...
-
-## _\<Konzept n>_ {#\_\_emphasis_konzept_n_emphasis}
 
 _\<Erklärung>_
 
