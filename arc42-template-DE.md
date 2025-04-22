@@ -140,6 +140,16 @@ Diese externen Systeme sind als <<extern>> gekennzeichnet, was verdeutlicht, das
 
 [![Zustand der Bestellung](images/zustand_bestellung.png)](images/zustand_bestellung.png)
 
+Das dargestellte Zustandsdiagramm zeigt die Laufzeitsicht einer Bestellung im System. Es beschreibt die dynamischen Verhaltensweisen und Zustandsänderungen einer Bestellung im Verlauf ihres Lebenszyklus – von der Erfassung bis zum endgültigen Abschluss. Die Visualisierung hilft dabei, Abläufe zu verstehen, Abhängigkeiten zwischen Prozessen zu erkennen und Fehlerfälle (z. B. Rücksendung oder Stornierung) gezielt zu behandeln.
+
+Eine Bestellung beginnt im Zustand „Bestellt“, nachdem der Kunde eine Bestellung im System ausgelöst hat. Nach erfolgreichem Zahlungseingang wechselt die Bestellung in den Zustand „Bezahlt“. Anschließend wird die Ware versendet, wodurch die Bestellung in den Zustand „Versandt“ übergeht. Kommt die Ware beim Kunden an, ist der Zustand „Zugestellt“ erreicht, was den regulären Abschluss eines Bestellvorgangs darstellt.
+
+Parallel dazu sind jedoch auch abweichende Abläufe möglich: Der Kunde kann die Bestellung stornieren, was direkt zum Zustand „Storniert“ führt. Wird die Bestellung zwar bezahlt, aber vom Kunden zurückgesendet, so geht sie zunächst in den Zustand „Rücksendung“ über. Nach erfolgreicher Bearbeitung der Rücksendung und Einleitung der Rückzahlung wird die Bestellung schließlich in den Zustand „Rückerstattet“ überführt.
+
+Der finale Abschluss des Prozesses erfolgt in einem Endzustand, der sowohl von einer erfolgreichen Zustellung als auch von einer Stornierung oder Rückerstattung erreicht werden kann.
+
+Diese Laufzeitsicht ermöglicht ein klares Verständnis über die möglichen Abläufe und Alternativen innerhalb des Bestellprozesses.
+
 ## _\<Klassenbibliothek>_ {#\_\_emphasis_klassenbibliothek_emphasis}
 
 [![Klassenbibliothek](images/class_diagramm.jpg)](images/class_diagramm.jpg)
