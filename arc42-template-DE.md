@@ -10,20 +10,20 @@ Template Version 8.2 DE. (basiert auf AsciiDoc Version), Januar 2023
 Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
 contributors. Siehe <https://arc42.org>.
 
-# Einführung und Ziele {#section-introduction-and-goals}
+# Einführung und Ziele 
 
-## Aufgabenstellung {#\_aufgabenstellung}
+## Aufgabenstellung 
 
 Ziel ist es, eine moderne, benutzerfreundliche und leistungsfähige E-Commerce-Plattform bereitzustellen, die ein optimales Einkaufserlebnis für Kundinnen und Kunden bietet und gleichzeitig die internen Betriebsabläufe effizient unterstützt.
 Die vollständige Konzeption und Umsetzung des neuen Systems erfolgt durch ein internes Softwareentwicklungsteam. Externe Partner oder Dienstleister sind in diesen Prozess nicht eingebunden.
 Das neue System soll alle zentralen E-Commerce-Funktionen abdecken. Dazu gehören unter anderem die Nutzerregistrierung und -verwaltung, eine leistungsstarke Produktsuche, Warenkorbfunktionen, ein durchgängiger Checkout-Prozess, Bestellbestätigungen sowie ein administrativer Bereich zur Artikelpflege und zur Verwaltung von Bestellungen.
 Technisch wird das System plattformunabhängig und hoch skalierbar konzipiert, um auch bei stark schwankender Last zuverlässig zu funktionieren. Der Betrieb erfolgt in einer Azure-basierten Cloud-Infrastruktur, um eine hohe Verfügbarkeit sowie einfache Wartung und Erweiterbarkeit zu gewährleisten.
 
-## Projektziele {#\_qualit_tsziele}
+## Projektziele 
 
 Die Projektziele finden sich im [hier](https://github.com/Snooze-Choose/Projektmanagement/issues?q=is%3Aissue%20state%3Aopen%20label%3Aepic).
 
-## Stakeholder {#\_stakeholder}
+## Stakeholder 
 
 ## Stakeholder-Tabelle
 
@@ -33,9 +33,9 @@ Die Projektziele finden sich im [hier](https://github.com/Snooze-Choose/Projektm
 | Max Mustermann   | Kunden          | Benutzerfreundliches und funktionales Endprodukt | Mittel                   | Hohe Qualität, intuitive Bedienung, schneller Support        |
 | IT-Team          | Administratoren | Stabile, wartbare und sichere Systemumgebung     | Gering                   | Technische Dokumentation, einfache Wartbarkeit, Sicherheit   |
 
-# Randbedingungen {#section-architecture-constraints}
+# Randbedingungen 
 
-## Technische Randbedingungen {#\_technische_Randbedingungen}
+## Technische Randbedingungen 
 
 | Komponente        | Technologie           |
 | ----------------- | --------------------- |
@@ -46,24 +46,22 @@ Die Projektziele finden sich im [hier](https://github.com/Snooze-Choose/Projektm
 | Service Discovery | .NET Aspire           |
 | Containerisierung | Docker                |
 
-## Organisatorische Randbedingungen {#\_organisatorische_Randbedingungen}
+## Organisatorische Randbedingungen 
 
 Die Entwicklung des Systems erfolgt nach dem Scrum-Vorgehensmodell.
 Sprints haben eine feste Dauer von zwei Wochen.
 Rollen wie Product Owner, Scrum Master und Entwicklungsteam sind definiert und besetzt.
 Die Sprintplanung, Reviews und Retrospektiven finden regelmäßig gemäß dem Scrum-Framework statt.
 
-# Kontextabgrenzung {#section-context-and-scope}
+# Kontextabgrenzung 
 
 Zur präzisen Definition der fachlichen Kontextabrenzung wurde ein UML-Diagramm erstellt, welches sämtliche Kommunikationsbeziehungen mit dem System festlegt.
 
 [![Fachlicher Kontext](images/fachlicher_context.png)](images/fachlicher_context.png)
 
-# Lösungsstrategie {#section-solution-strategy}
+# Bausteinsicht 
 
-# Bausteinsicht {#section-building-block-view}
-
-## Whitebox Gesamtsystem {#\_whitebox_gesamtsystem}
+## Whitebox Gesamtsystem 
 
 [![Whitebox Gesamtsystem](images/whitebox.png)](images/whitebox.png)
 
@@ -113,7 +111,7 @@ Das Subsystem Shop importiert Funktionalitäten aus dem Subsystem System (z. B
 Auch das Subsystem Admin nutzt zentrale Funktionen des Subsystems System.
 Darüber hinaus importiert Shop auch Bestandteile aus dem Subsystem Admin, insbesondere im Zusammenhang mit Produktdaten.
 
-## Blackbox Gesamtsystem {#\_blackbox_gesamtsystem}
+## Blackbox Gesamtsystem 
 
 [![Blackbox Gesamtsystem](images/blackbox.png)](images/blackbox.png)
 
@@ -134,9 +132,9 @@ Ein Versandsystem, hier repräsentiert durch den Anbieter DHL, wird ebenfalls vo
 
 Diese externen Systeme sind als <<extern>> gekennzeichnet, was verdeutlicht, dass sie außerhalb der Verantwortung des Shops liegen, jedoch über wichtige Schnittstellen in die Geschäftsprozesse integriert sind.
 
-# Laufzeitsicht {#section-runtime-view}
+# Laufzeitsicht 
 
-## _\<Zustände der Bestellung>_ {#\_\_emphasis_zustand_der_bestellung_emphasis}
+## _\<Zustände der Bestellung>_ 
 
 [![Zustand der Bestellung](images/zustand_bestellung.png)](images/zustand_bestellung.png)
 
@@ -150,7 +148,7 @@ Der finale Abschluss des Prozesses erfolgt in einem Endzustand, der sowohl von e
 
 Diese Laufzeitsicht ermöglicht ein klares Verständnis über die möglichen Abläufe und Alternativen innerhalb des Bestellprozesses.
 
-## _\<Klassenbibliothek>_ {#\_\_emphasis_klassenbibliothek_emphasis}
+## _\<Klassenbibliothek>_ 
 
 [![Klassenbibliothek](images/class_diagramm.jpg)](images/class_diagramm.jpg)
 
@@ -162,11 +160,11 @@ Die Klasse Order (Bestellung) enthält ebenfalls eine eindeutige ID, die verwend
 
 Ein Product (Produkt) ist durch eine ID, eine Mengenangabe, einen Preis und eine Bild-URL beschrieben. Jedes Produkt gehört genau einer Category (Kategorie) an. Die Kategorie ist als Enumeration dargestellt und umfasst die Werte „Haushalt“, „Technik“ und „Nahrung“. Ein Produkt kann keiner oder mehreren Bestellungen zugeordnet sein, gehört jedoch immer genau einer dieser Kategorien an.
 
-# Verteilungssicht {#section-deployment-view}
+# Verteilungssicht 
 
 [![Grobarchitektur](images/architektur.png)](images/architektur.png)
 
-Das gezeigte Diagramm stellt eine Microservice-Architektur für ein webbasiertes Shopsystem dar. Es zeigt die verschiedenen Komponenten, wie sie miteinander interagieren, und welche externen Dienste eingebunden sind. Hier ist eine zusammenhängende Erklärung:
+Das gezeigte Diagramm stellt eine Microservice-Architektur für ein webbasiertes Shopsystem dar. Es zeigt die verschiedenen Komponenten, wie sie miteinander interagieren, und welche externen Dienste eingebunden sind.
 
 Ein Client, also ein Webbrowser auf einem Computer oder mobilen Gerät, greift auf zwei verschiedene Frontend-Dienste zu: den ShopfrontendService für Kunden und den AdminfrontendService für Administratoren. Beide Dienste laufen in Docker-Containern und basieren auf Node.js.
 
@@ -180,28 +178,13 @@ Für Verwaltungs- und Analysezwecke steht außerdem ein pgAdmin zur Verfügung, 
 
 Alle Microservices – OrderService, ProductService und AuthenticationService – kommunizieren untereinander über einen Eventbus, was auf eine ereignisgesteuerte Architektur hinweist. Über diesen Eventbus können Änderungen und Ereignisse systemweit verteilt und verarbeitet werden, z. B. wenn eine neue Bestellung erstellt oder ein Produkt aktualisiert wird.
 
-# Querschnittliche Konzepte {#section-concepts}
+# Querschnittliche Konzepte 
 
-## _\<Konzept 1>_ {#\_\_emphasis_konzept_1_emphasis}
+## _\<Agiles Entwicklungskonzept>_ 
 
-_\<Erklärung>_
+Die Software soll innerhalb eines agilen Entwicklungskonzepts entwickelt werden. Für die Umsetzung der zuvor genannten Anforderungen werden Rollen benötigt, die die folgenden Funktionen erfüllen: Produktowner, Entwickler und Teamleiter. Die Verantwortung für die Definition der zu verarbeitenden Informationen im Rahmen des Auftrags obliegt dem Produkt Owner. Das Verfahren basiert auf der Durchführung von Sprints. Zu Beginn des Entwicklungsprozesses ist eine sorgfältige Planung des Sprints erforderlich, in dessen Verlauf der Teamleiter die Aufgaben an die Entwickler weiterleitet. Im Anschluss werden die Aufgaben von den Entwicklern erledigt und die Ergebnisse besprochen. Während des Sprints finden Meetings statt, in denen der Austausch der aktuellen Stände erfolgt. In der Konsequenz resultiert daraus ein effektives und effizientes System.
 
-# Architekturentscheidungen {#section-design-decisions}
-
-# Qualitätsanforderungen {#section-quality-scenarios}
-
-::: formalpara-title
-**Weiterführende Informationen**
-:::
-
-Siehe [Qualitätsanforderungen](https://docs.arc42.org/section-10/) in
-der online-Dokumentation (auf Englisch!).
-
-## Qualitätsbaum {#\_qualit_tsbaum}
-
-## Qualitätsszenarien {#\_qualit_tsszenarien}
-
-# Risiken und technische Schulden {#section-technical-risks}
+# Risiken und technische Schulden 
 
 ### Risiko: Geringe Nutzerakzeptanz des Shops
 
@@ -213,4 +196,3 @@ der online-Dokumentation (auf Englisch!).
   - Analyse von Konkurrenzprodukten und Nutzerverhalten.
 - **Technische Schulden:** Möglicherweise müssen grundlegende Architektur- oder Designentscheidungen überarbeitet werden, falls sich im Live-Betrieb fundamentale Nutzungsprobleme zeigen. Dies kann zu erhöhtem Refactoring-Aufwand führen.
 
-# Glossar {#section-glossary}
