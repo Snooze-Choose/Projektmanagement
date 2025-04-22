@@ -54,6 +54,7 @@ Rollen wie Product Owner, Scrum Master und Entwicklungsteam sind definiert und b
 Die Sprintplanung, Reviews und Retrospektiven finden regelmäßig gemäß dem Scrum-Framework statt.
 
 # Kontextabgrenzung {#section-context-and-scope}
+
 Zur präzisen Definition der fachlichen Kontextabrenzung wurde ein UML-Diagramm erstellt, welches sämtliche Kommunikationsbeziehungen mit dem System festlegt.
 
 [![Fachlicher Kontext](images/fachlicher_context.png)](images/fachlicher_context.png)
@@ -69,33 +70,37 @@ Zur präzisen Definition der fachlichen Kontextabrenzung wurde ein UML-Diagramm 
 Die dargestellte Grafik zeigt die interne Struktur des Gesamtsystems auf der höchsten Ebene und entspricht damit der Whitebox-Darstellung des Gesamtsystems gemäß Abschnitt 5 des arc42-Templates. Diese Ansicht dient dazu, die wesentlichen Subsysteme und deren Beziehungen untereinander sichtbar zu machen.
 
 Das Gesamtsystem ist in drei zentrale Subsysteme gegliedert:
-  - Shop
-  - Admin
-  - System
+
+- Shop
+- Admin
+- System
 
 Jedes dieser Subsysteme enthält mehrere Module, die bestimmte fachliche oder technische Aufgaben übernehmen.
 
 ### Subsystem "Shop":
+
 Dieses Subsystem bildet die Kernfunktionen des Onlineshops ab. Es besteht aus den Modulen:
 
-  Produktübersicht: Zeigt Produkte für Endkunden an.
-  Warenkorb: Ermöglicht das Sammeln von Produkten vor dem Kauf.
-  Checkout: Abwicklung des Kaufprozesses.
-  
+Produktübersicht: Zeigt Produkte für Endkunden an.
+Warenkorb: Ermöglicht das Sammeln von Produkten vor dem Kauf.
+Checkout: Abwicklung des Kaufprozesses.
+
 Zwischen den Modulen bestehen Zugriffsbeziehungen:
 Das Modul „Warenkorb“ greift auf die „Produktübersicht“ zu, während der „Checkout“ wiederum auf den „Warenkorb“ zugreift.
 
 ### Subsystem "Admin":
+
 Das Admin-Subsystem stellt Funktionen für die Verwaltung des Shops bereit. Es beinhaltet:
 
-  Produktliste: Verwaltung und Anzeige aller Produkte.
-  Produkteinstellungen: Konfiguration einzelner Produkte.
-  Bestellübersicht: Einsicht in Bestellungen.
+Produktliste: Verwaltung und Anzeige aller Produkte.
+Produkteinstellungen: Konfiguration einzelner Produkte.
+Bestellübersicht: Einsicht in Bestellungen.
 
 Auch hier gibt es interne Zugriffsbeziehungen:
 Das Modul „Produkteinstellungen“ greift auf die „Produktliste“ zu.
 
 ### Subsystem "System"
+
 Dieses Subsystem enthält systemweite Konfigurationsmöglichkeiten:
 
 Benutzereinstellungen: Verwaltung nutzerspezifischer Einstellungen.
@@ -137,7 +142,7 @@ Diese externen Systeme sind als <<extern>> gekennzeichnet, was verdeutlicht, das
 
 ## _\<Klassenbibliothek>_ {#\_\_emphasis_klassenbibliothek_emphasis}
 
-[![Klassenbibliothek](images/class_diagramm.png)](images/class_diagramm.png)
+[![Klassenbibliothek](images/class_diagramm.jpg)](images/class_diagramm.jpg)
 
 ## _\<Bezeichnung Laufzeitszenario n>_ {#\_\_emphasis_bezeichnung_laufzeitszenario_n_emphasis}
 
